@@ -50,7 +50,7 @@ El entorno fue desplegado utilizando máquinas virtuales dentro de **Oracle Virt
 
 ### Topología de red
 
-![Configuración de red](nat_network_setup.png)
+![Configuración de red](Proyecto%20SOC%20Homelab%20%26%20TTP%20Threat%20Hunting/nat_network_setup.png)
 
 La arquitectura permite generar actividad controlada desde un entorno virtualizado y observar cómo los eventos son recolectados y procesados por Wazuh.
 
