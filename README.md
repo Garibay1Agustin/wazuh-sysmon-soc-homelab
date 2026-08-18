@@ -166,19 +166,18 @@ Durante el análisis se pudo revisar información como:
 
 # 6. Análisis técnico del evento
 
-Como parte de la investigación se inspeccionó el payload completo del evento en formato **JSON**.
+Como parte de la investigación se inspeccionó el desglose detallado del evento (**Document Details**) en la consola de Wazuh.
 
-Este análisis permitió revisar con mayor detalle la información recopilada por Sysmon y procesada por Wazuh.
+El análisis de los campos estructurados en la vista de tabla (**Table**) permitió revisar con precisión los datos clave recopilados por Sysmon y procesados por Wazuh.
 
 Entre los datos relevantes se encuentran:
 
-- Nombre del proceso.
-- PID.
-- Ruta de ejecución.
-- Usuario asociado.
-- Árbol de procesos.
-- Información temporal.
-- Datos adicionales proporcionados por Sysmon.
+- Nombre del proceso (`data.win.eventdata.image`).
+- Identificador de proceso (PID) y usuario ejecutor.
+- Ruta de origen y archivo creado (`data.win.eventdata.targetFilename`).
+- Canal de eventos (`Microsoft-Windows-Sysmon/Operational`).
+- EventID de Sysmon (`11 - FileCreated`).
+- Marcas temporales (UTC) y metadatos del agente.
 
 ![Detalles del evento Sysmon](Proyecto%20SOC%20Homelab%20%26%20TTP%20Threat%20Hunting/sysmon_json_event_details.png)
 
