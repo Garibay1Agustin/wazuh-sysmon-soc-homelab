@@ -244,7 +244,7 @@ Este flujo permitió trabajar de forma práctica las etapas de **telemetría, de
 - Búsqueda de eventos mediante filtros.
 - Identificación de actividad asociada a archivos.
 - Análisis de alertas.
-- Inspección de eventos en formato JSON.
+- Inspección de eventos y campos estructurados.
 - Identificación de indicadores relevantes para investigación.
 
 ### Infraestructura
@@ -268,7 +268,7 @@ Este flujo permitió trabajar de forma práctica las etapas de **telemetría, de
 | **Kali Linux** | Entorno de simulación |
 | **PowerShell** | Generación controlada de eventos |
 | **Oracle VirtualBox** | Virtualización del laboratorio |
-| **JSON** | Análisis estructurado de eventos |
+| **Campos estructurados** | Análisis detallado de eventos en el SIEM |
 
 ---
 
@@ -329,7 +329,7 @@ Durante el desarrollo se practicaron tareas relacionadas con:
 - Detección mediante reglas de Wazuh.
 - Threat Hunting.
 - Análisis de procesos y eventos.
-- Inspección de información estructurada en JSON.
+- Inspección de información estructurada en la consola de Wazuh.
 - Triage de alertas de seguridad.
 
 El proyecto permitió comprender de forma práctica cómo un analista SOC puede pasar desde la **generación de un evento en un endpoint hasta su detección, investigación y análisis dentro de un SIEM**.
