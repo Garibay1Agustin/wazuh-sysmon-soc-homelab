@@ -124,7 +124,7 @@ Se utilizó PowerShell para ejecutar un archivo de prueba y generar telemetría 
 
 Durante la simulación se observó la respuesta del mecanismo de protección integrado de Windows.
 
-![Respuesta de Microsoft Defender](Proyecto%20SOC%20Homelab%20%26%20TTP%20Threat%20Hunting/defender_blocking_threat.png)
+![Respuesta de Microsoft Defender](Proyecto%20SOC%20Homelab%20%26%20TTP%20Threat%20Hunting/defender_blocking_trheat.png)
 
 ### Ejecución mediante PowerShell
 
