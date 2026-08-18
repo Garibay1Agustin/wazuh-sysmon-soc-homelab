@@ -1,7 +1,6 @@
 # wazuh-sysmon-soc-homelab
 Lab de SOC práctico utilizando Wazuh SIEM y Sysmon en Windows 10 para recolección de telemetría avanzada, detección de ejecuciones y Threat Hunting.
 
-# SOC Homelab: Wazuh, Sysmon y Threat Hunting
 
 # SOC Homelab: Wazuh, Sysmon y Threat Hunting
 
@@ -51,7 +50,7 @@ El entorno fue desplegado utilizando máquinas virtuales dentro de **Oracle Virt
 
 ### Topología de red
 
-![Configuración de red](./nat_network_setup.png)
+![Configuración de red](nat_network_setup.png)
 
 La arquitectura permite generar actividad controlada desde un entorno virtualizado y observar cómo los eventos son recolectados y procesados por Wazuh.
 
@@ -63,7 +62,7 @@ Se realizó el despliegue del servidor Wazuh en un entorno virtualizado.
 
 El servidor funciona como punto central para la recepción, procesamiento y análisis de los eventos generados por los endpoints monitoreados.
 
-![Wazuh Server](./wazuh_server_running.png)
+![Wazuh Server](wazuh_server_running.png)
 
 ### Componentes utilizados
 
@@ -81,15 +80,15 @@ Se preparó una máquina virtual con **Windows 10** como endpoint de laboratorio
 
 Este equipo representa un activo dentro de una infraestructura empresarial que será monitoreado desde el SOC.
 
-![Windows 10 Endpoint](./Windows10-SOC-Victim.png)
+![Windows 10 Endpoint](Windows10-SOC-Victim.png)
 
 Posteriormente se instaló el agente de Wazuh para permitir el envío de eventos hacia el servidor.
 
-![Wazuh Agent Instalado](./wazuh_agent_installed.png)
+![Wazuh Agent Instalado](wazuh_agent_installed.png)
 
 Una vez completado el registro, se verificó desde la consola que el agente se encontrara correctamente conectado y en estado **Active**.
 
-![Wazuh Agent Conectado](./wazuh_agent_connected.png)
+![Wazuh Agent Conectado](wazuh_agent_connected.png)
 
 ---
 
@@ -99,7 +98,7 @@ Para obtener mayor visibilidad sobre la actividad del endpoint se instaló **Sys
 
 Sysmon permite registrar diferentes tipos de eventos relevantes para investigaciones de seguridad, incluyendo creación de procesos, creación de archivos y otras actividades del sistema.
 
-![Sysmon Instalado](./sysmon_installed.png)
+![Sysmon Instalado](sysmon_installed.png)
 
 ### Integración con Wazuh
 
@@ -111,7 +110,7 @@ Microsoft-Windows-Sysmon/Operational
 
 De esta manera, la telemetría generada por Sysmon puede ser centralizada y analizada desde Wazuh.
 
-![Integración Sysmon con Wazuh](./sysmon_wazuh_integration.png)
+![Integración Sysmon con Wazuh](sysmon_wazuh_integration.png)
 
 ---
 
@@ -125,13 +124,13 @@ Se utilizó PowerShell para ejecutar un archivo de prueba y generar telemetría 
 
 Durante la simulación se observó la respuesta del mecanismo de protección integrado de Windows.
 
-![Respuesta de Microsoft Defender](./defender_blocking_threat.png)
+![Respuesta de Microsoft Defender](defender_blocking_threat.png)
 
 ### Ejecución mediante PowerShell
 
 Se realizó la ejecución controlada del proceso desde PowerShell para generar eventos que posteriormente pudieran ser investigados desde Wazuh.
 
-![Ejecución mediante PowerShell](./process_execution_powershell.png)
+![Ejecución mediante PowerShell](process_execution_powershell.png)
 
 ---
 
@@ -161,7 +160,7 @@ Durante el análisis se pudo revisar información como:
 - Ruta del archivo.
 - Información recopilada mediante Sysmon.
 
-![Alerta de Wazuh](./wazuh_sysmon_alert_details.png)
+![Alerta de Wazuh](wazuh_sysmon_alert_details.png)
 
 ---
 
@@ -181,7 +180,7 @@ Entre los datos relevantes se encuentran:
 - Información temporal.
 - Datos adicionales proporcionados por Sysmon.
 
-![Detalles del evento Sysmon](./sysmon_json_event_details.png)
+![Detalles del evento Sysmon](sysmon_json_event_details.png)
 
 Este tipo de información resulta útil durante el **triage de alertas**, ya que permite pasar de una alerta general a un análisis más detallado de la actividad observada.
 
